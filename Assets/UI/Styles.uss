@@ -1,0 +1,209 @@
+* {
+    -unity-font: url("project://database/Assets/Assets/Fonts/RobotoCondensed-Bold.ttf");
+    -unity-font-definition: initial;
+}
+
+
+.pause,
+.login {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition-property: background-color;
+    transition-duration: 400ms;
+}
+
+.pause.pause-active,
+.login.login-active {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.sections {
+    flex: 1;
+}
+
+.header,
+.footer {
+    height: 80px;
+    background-color: #111111;
+    border-color: #f6c443;
+    translate: 0 100%;
+    transition-property: translate;
+    transition-duration: 400ms;
+}
+
+.pause.pause-active .footer {
+    translate: 0 0;
+}
+
+.header {
+    border-bottom-width: 3px;
+    justify-content: center;
+    padding-left: 24px;
+    background-image: url("project://database/Assets/Assets/Images/header-gradient.png");
+    translate: 0 -100%;
+    transition-property: translate;
+    transition-duration: 400ms;
+}
+
+.pause.pause-active .header {
+    translate: 0 0;
+}
+
+.header Label {
+    color: white;
+    font-size: 36px;
+}
+
+.body {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    border-top-width: 3px;
+    flex-direction: row;
+    color: #ffffff;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 24px;
+    background-image: url("project://database/Assets/Assets/Images/footer-gradient.png");
+}
+
+.action {
+    flex-direction: row;
+    margin-left: 24px;
+}
+
+.action-key {
+    background-color: #ffffff;
+    color: black;
+    font-size: 20px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    -unity-text-align: middle-center;
+}
+
+.action-desc {
+    font-size: 18px;
+    -unity-text-align: middle-center;
+
+}
+
+.menu-items {
+    width: 400px;
+    opacity: 0;
+    translate: 40px 0;
+    transition-property: all;
+    transition-duration: 400ms;
+}
+
+.pause.pause-active .menu-items {
+    translate: 0 0;
+    opacity: 1;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-item.space-top {
+    margin-top: 24px;
+}
+
+.menu-item-text {
+    background-color: #ffffff;
+    color: #6E6E6E;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 27px;
+}
+
+.menu-item.menu-item-active .menu-item-text {
+    background-color: #f6c443;
+    color: #000000;
+
+
+}
+
+.menu-item-text Label {
+    font-size: 29px;
+}
+
+.menu-item-shadow {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 27px;
+    top: 6px;
+    left: 4px;
+
+}
+
+.login-right {
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border-left-width: 3px;
+    border-color: #f6c443;
+}
+
+.login-content {
+    width: 400px;
+}
+
+.login-heading {
+    -unity-text-align: middle-center;
+    font-size: 40px;
+    margin-bottom: 24px;
+}
+
+.login-email,
+.login-password {
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.login-email Label,
+.login-password Label {
+    font-size: 14px;
+    -unity-font: url("project://database/Assets/Assets/Fonts/RobotoCondensed-Medium.ttf");
+}
+
+.login-email:focus Label,
+.login-password:focus Label {
+    color: white;
+}
+
+.login-email #unity-text-input,
+.login-password #unity-text-input {
+    background-color: #090909;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    height: 50px;
+    padding: 0 16px;
+}
+
+.login-email #unity-text-input:hover,
+.login-password #unity-text-input:hover,
+.login-email:focus #unity-text-input,
+.login-password:focus #unity-text-input {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-button {
+    border-width: 0;
+    height: 50px;
+    border-radius: 6px;
+    background-color: #f6c443;
+    color: black;
+    font-size: 24px;
+}
